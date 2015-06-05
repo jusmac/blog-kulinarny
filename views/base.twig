@@ -1,0 +1,63 @@
+{% block html_head_container %}
+    {% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+</head>
+{% endblock %}
+<body class="{{body_class}} body" data-template="base.twig">
+    <header>
+        {% block header %}
+            <div id='menu-container'>
+                <div class='menu'>
+                    <ul>
+                        {% for item in menu.get_items %}
+                            <li class='menu-li {{item.classes | join(' ')}}'>
+                                <a href='{{item.get_link}}'><h4>{{item.title}}</h4></a>
+                                        {% if item.get_children %}
+                                    <div  class='submenu'>
+                                        <ul>
+                                            {% for child in item.get_children %}
+                                                <li class='submenu-li'>
+                                                    <a href='{{child.get_link}}'><h5>{{child.title}}</h5></a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                            </li>
+                        {% endfor %}                           
+                    </ul>
+                </div>
+            </div>
+        {% endblock %}
+    </header>
+
+    <section>
+        <div id="main-logo"> 
+            <a class='main-logo-p'href='http://localhost/wordpress/o-mnie'><p><strong>O mnie</strong></p></a>
+        </div>
+        
+        <div id='fork'>
+            <img  id='fork-image' src='/wordpress/wp-content/themes/timber-starter-theme/views/img/fork.png' alt='fork'/>
+        </div>
+        <div id='left-menu'>
+            {{lewy_widget_area}}
+        </div>
+       
+        <div id='content'> 
+            {% block content %}{% endblock %}
+        </div>  
+        
+    </section>
+
+    {% block footer %}
+        <footer>
+            {% include 'footer.twig' %}
+        </footer>
+    {% endblock %}
+    <div id="background">
+        <img id='background-image' src="/wordpress/wp-content/themes/timber-starter-theme/views/img/background.jpg" alt='background'/>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+/*  Theme Name: blog-kulinarny
+        Description: Zobaczymy co wyjdzie
+        Author: Justyna
+*/
+
+.body{
+    margin: 1%;;
+    padding: 0;
+    font: sans-serif;
+    color: black;
+    size: 14px;
+}
+
+#menu-container{
+    position: fixed;
+    width: 100%;
+    height: 13%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+#main-logo{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    top: 17%;
+    width: 120px;
+    height: 120px;
+    margin-left: 10%;
+    z-index: 2;
+    text-align: center;
+}
+
+#main-logo:hover{
+    background-color: white;
+}
+
+#fork{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding:0;
+    z-index: 1;
+}
+
+#fork-image{
+    width: 100%;
+}
+
+#left-menu{
+    float: left;
+    top: 40%;
+    position:absolute;
+    z-index: 1;
+    padding-top: 0;
+    height: 100%;
+    width: 26%;
+    text-align: center;
+    padding: 5px;
+    margin-left: 2%;
+}
+
+#content{
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    width: 68%;
+    float: right;
+    z-index: 1;
+    padding-top: 0;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    margin: 10px;
+}
+
+#title{
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    padding-bottom: 0;
+    border-bottom: black solid 1px;
+}
+
+#article{
+    width: 90%;
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+
+#background{
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    top: 40%;
+    padding: 0;
+    opacity: 0.3;
+}
+
+#background-image{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.menu-li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    width: 15%;
+    text-align: center;
+    height: 40%;
+}
+
+.menu-li a{
+    display: block;
+    height: 100%;
+    padding-top: 5px;
+    border-radius: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.submenu{
+    position: absolute;
+    list-style: none;
+    padding:0;
+    z-index: 3;
+    text-align: left;
+    display: block;
+    padding:0;
+    z-index: 3;
+    text-align: left;
+    height: 40%;
+    width: 100%;
+}
+
+.submenu-li-none{
+    display: none;
+}
+
+.submenu-li{
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    float: left;
+    text-align: left;
+    margin: 0;
+    z-index: 1;
+    width: auto;
+    padding: 5px;
+    padding-top: 0;
+    height: 80%;
+
+}
+
+.rounded{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+h1{
+    font-size: 30px;
+    color: darkblue;
+    margin: 0;
+}
+
+h3{
+    font-size: 25px;
+    margin: 0;
+}
+
+h4{
+    font-size: 20px;
+    margin: 0;
+    margin: 0;
+}
+
+h5 {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+
+p{
+    font-size: 17px;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0;
+    color: darkblue;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: darkslateblue;
+}
+
+.main-logo-p{
+    line-height: 120px;
+    display: block;
+}
+
+.main-logo-p:hover{
+    text-decoration: none;
+}
