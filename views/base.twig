@@ -9,24 +9,7 @@
         {% block header %}
             <div id='menu-container'>
                 <div class='menu'>
-                    <ul>
-                        {% for item in menu.get_items %}
-                            <li class='menu-li {{item.classes | join(' ')}}'>
-                                <a href='{{item.get_link}}'><h4>{{item.title}}</h4></a>
-                                        {% if item.get_children %}
-                                    <div  class='submenu'>
-                                        <ul>
-                                            {% for child in item.get_children %}
-                                                <li class='submenu-li'>
-                                                    <a href='{{child.get_link}}'><h5>{{child.title}}</h5></a>
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </div>
-                            </li>
-                        {% endfor %}                           
-                    </ul>
+                    {{gorny_widget_area}}
                 </div>
             </div>
         {% endblock %}

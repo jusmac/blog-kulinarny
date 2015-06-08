@@ -1,6 +1,6 @@
 /*  Theme Name: blog-kulinarny
-        Description: Zobaczymy co wyjdzie
-        Author: Justyna
+        Description: Szablon Wordpress z u¿yciem Twig
+        Author: Justyna justyna.machalica@gmail.com
 */
 
 .body{
@@ -10,7 +10,6 @@
     color: black;
     size: 14px;
 }
-
 #menu-container{
     position: fixed;
     width: 100%;
@@ -21,23 +20,20 @@
     z-index: 999;
     background-color: white;
 }
-
 #main-logo{
     background-color: whitesmoke;
     border-radius: 50%;
     position: absolute;
-    top: 17%;
+    top: 16%;
     width: 120px;
     height: 120px;
     margin-left: 10%;
     z-index: 2;
     text-align: center;
 }
-
 #main-logo:hover{
     background-color: white;
 }
-
 #fork{
     position: absolute;
     top: 15%;
@@ -47,11 +43,9 @@
     padding:0;
     z-index: 1;
 }
-
 #fork-image{
     width: 100%;
 }
-
 #left-menu{
     float: left;
     top: 40%;
@@ -64,7 +58,6 @@
     padding: 5px;
     margin-left: 2%;
 }
-
 #content{
     position: absolute;
     top: 42%;
@@ -77,8 +70,14 @@
     padding: 10px;
     height: 100%;
     margin: 10px;
+    padding-bottom: 3%;
 }
-
+#conten-index{
+    top: 3%;
+    left:0;
+    margin: 0;
+    width: 100%;
+}
 #title{
     width: 94%;
     padding-left: 3%;
@@ -87,7 +86,6 @@
     padding-bottom: 0;
     border-bottom: black solid 1px;
 }
-
 #article{
     width: 90%;
     margin-left: 5%;
@@ -95,7 +93,6 @@
     padding-right: 5%;
     padding-top: 1%;
 }
-
 #background{
     position: fixed;
     width: 100%;
@@ -104,12 +101,15 @@
     padding: 0;
     opacity: 0.3;
 }
-
 #background-image{
     width: 80%;
     margin-left: 10%;
 }
-
+.menu-item{
+    list-style: none;
+    font-weight: bold;
+    text-align: left;
+}
 .menu-li{
     list-style: none;
     display: inline-block;
@@ -118,7 +118,6 @@
     text-align: center;
     height: 40%;
 }
-
 .menu-li a{
     display: block;
     height: 100%;
@@ -127,7 +126,6 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .submenu{
     position: absolute;
     list-style: none;
@@ -141,11 +139,9 @@
     height: 40%;
     width: 100%;
 }
-
 .submenu-li-none{
     display: none;
 }
-
 .submenu-li{
     display: inline-block;
     position: relative;
@@ -160,61 +156,271 @@
     height: 80%;
 
 }
-
 .rounded{
-    text-align: center;
     margin-top: 20px;
     padding: 10px;
+    text-align: left;
 }
 
+.respond{
+    display: none;
+}
 h1{
     font-size: 30px;
     color: darkblue;
     margin: 0;
 }
-
 h3{
     font-size: 25px;
     margin: 0;
 }
-
 h4{
     font-size: 20px;
     margin: 0;
     margin: 0;
 }
-
 h5 {
     font-size: 17px;
     font-weight: bold;
     margin: 0;
 }
-
 p{
     font-size: 17px;
     margin: 0;
 }
-
 a{
     text-decoration: none;
     font-size: 17px;
     margin: 0;
     color: darkblue;
 }
-
 a:hover{
     text-decoration: underline;
 }
-
 a:visited{
     color: darkslateblue;
 }
-
 .main-logo-p{
     line-height: 120px;
     display: block;
 }
-
 .main-logo-p:hover{
     text-decoration: none;
+}
+
+
+@media all and (max-width: 350px) {
+    #main-logo{
+        top: 15%;
+        width: 35px;
+        height: 35px;
+        margin-left: 5%;
+    }
+    #left-menu{
+        display: none;
+    }
+    #content{
+        width: 95%;
+        left:0;
+        top: 30%;
+    }
+    #background{
+        top: 60%;
+    }
+    .submenu-li{
+        float: none;
+    }
+    footer{
+        display: none;
+    }
+
+    .content-wrapper{
+        width: 90%;
+    }
+
+    .alignnone{
+        width: 90%;
+        left: 5%;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    h4{
+        font-size: 13px;
+    }
+    h5 {
+        font-size: 10px;
+    }
+    p{
+        font-size: 10px;
+    }
+    a{
+        font-size: 10px;
+        margin: 0;
+    }
+    .main-logo-p{
+        line-height: 35px;
+    }
+}
+
+@media all and (max-width: 550px) and (min-width: 351px){
+    #main-logo{
+        top: 15%;
+        width: 55px;
+        height: 55px;
+        margin-left: 5%;
+    }
+    #left-menu{
+        display: none;
+    }
+    #content{
+        width: 95%;
+        top: 32%;
+        left:0;
+    }
+    #background{
+        top: 60%;
+    }
+    .submenu-li{
+        float: none;
+    }
+    footer{
+        display: none;
+    }
+    .content-wrapper{
+        width: 100%;
+    }
+    .alignnone{
+        width: 90%;
+        left: 5%;
+    }
+    h1{
+        font-size: 22px;
+    }
+    h3{
+        font-size: 17px;
+    }
+    h4{
+        font-size: 15px;
+    }
+    h5 {
+        font-size: 12px;
+    }
+    p{
+        font-size: 12px;
+    }
+    a{
+        font-size: 12px;
+        margin: 0;
+    }
+    .main-logo-p{
+        line-height: 55px;
+    }
+}
+
+@media all and (min-width: 551px) and (max-width: 700px){
+    #main-logo{
+        top: 15%;
+        width: 70px;
+        height: 70px;
+        margin-left: 5%;
+    }
+    #left-menu{
+        width: 20%
+    }
+    #content{
+        width: 75%;
+        left: 22%;
+        top: 38%;
+    }
+    #background{
+        top: 60%;
+    }
+    .submenu-li{
+        float: none;
+    }
+    footer{
+        display: none;
+    }
+    .content-wrapper{
+        width: 100%;
+    }
+    .alignnone{
+        width: 90%;
+        left: 5%;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 19px;
+    }
+    h4{
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+    }
+    a{
+        font-size: 14px;
+        margin: 0;
+    }
+    .main-logo-p{
+        line-height: 70px;
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1000px){
+    #main-logo{
+        top: 14%;
+        width: 90px;
+        height: 90px;
+        margin-left: 7%;
+    }
+    #left-menu{
+        width: 25%
+    }
+    #content{
+        width: 70%;
+        left: 22%;
+        top: 38%;
+    }
+    #background{
+        top: 60%;
+    }
+    .content-wrapper{
+        width: 100%;
+    }
+    .alignnone{
+        width: 90%;
+        left: 5%;
+    }
+    h1{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+    a{
+        font-size: 16px;
+        margin: 0;
+    }
+    .main-logo-p{
+        line-height: 90px;
+    }
 }

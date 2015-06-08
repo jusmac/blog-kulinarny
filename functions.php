@@ -7,12 +7,25 @@ function funkcja_dodajaca_widgety() {
 		'id'            => 'home_right_1',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="rounded">',
+		'after_title'   => '</h4>',
 	) );
 
 }
 add_action( 'widgets_init', 'funkcja_dodajaca_widgety' );
+function funkcja_dodajaca_widgety_next() {
+
+	register_sidebar ( array(
+		'name'          => 'Home top sidebar',
+		'id'            => 'home_top_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="rounded">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'funkcja_dodajaca_widgety_next' );
 
 	if (!class_exists('Timber')){
 		add_action( 'admin_notices', function(){
