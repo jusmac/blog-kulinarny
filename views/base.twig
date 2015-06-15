@@ -8,22 +8,20 @@
     <header>
         {% block header %}
             <div id='menu-container'>
-                <div class='menu-widgets'>
-                    {{gorny_widget_area}}
+                <div class='menu-content'>
+                    <a href='http://justyna-m.890m.com/'><h1 class=h1-menu>Od kuchni</h1></a>
+                    <h2 class=h2-menu>Czyli książeczka z przepisami</h2>
                 </div>
             </div>
+            <div id='fork'>
+            <img class='fork-img' src='/wp-content/themes/timber-starter-theme/views/img/fork.png' alt=''/>
+        </div> 
+            <div id='menu-container-background'>
+        </div>
         {% endblock %}
     </header>
 
-    <section>
-        <div id="main-logo"> 
-            <a class='main-logo-p'href='http://justyna-m.890m.com/o-mnie/'><p><strong>O mnie</strong></p></a>
-        </div>
-        <div id='fork'>
-        </div>
-        <div id='fork-image'>
-            
-        </div>
+    <section> 
         <div id='left-menu'>
             {{lewy_widget_area}}
         </div>
@@ -40,7 +38,7 @@
         </footer>
     {% endblock %}
     <div id="background">
-      
+      <img class='background-img' src= /wp-content/themes/timber-starter-theme/views/img/background.jpg alt=''/>
     </div>
 
 </body>

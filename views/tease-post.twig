@@ -2,12 +2,19 @@
 {% block content %}
 
 	<div class='content-gallery'>
-		<h4 class="h4">
-			<a href="{{post.link}}">{{post.title}}</a>
-		</h2>
-			{% if post.thumbnail.src %}
-				<img class='thumbnail' src="{{post.thumbnail.src}}" />
-			{% endif %}
-		<p><small>{{post.get_preview(25)}}</small></p>
+		<div class='card'>
+			<div class='front'>
+				<p><small>{{ post.post_date|date}}</small></p>
+					<h4 class="h4">
+						<a href="{{post.link}}">{{post.title}}</a>
+					</h4>
+					{% if post.thumbnail.src %}
+						<img class='thumbnail' src="{{post.thumbnail.src}}" />
+					{% endif %}
+			</div>
+			<div class='back'>	
+				<p><small>{{post.get_preview(35)}}</small></p>
+			</div>
+		</div>
 	</div>
 {% endblock %}
