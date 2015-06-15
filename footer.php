@@ -10,4 +10,10 @@ if (!isset($timberContext)) {
 $timberContext['content'] = ob_get_contents();
 ob_end_clean();
 $templates = array('page-plugin.twig');
+
+	ob_start();
+	dynamic_sidebar('home_right_1');
+	$timberContext['lewy_widget_area'] = ob_get_contents();
+	ob_end_clean();
+
 Timber::render($templates, $timberContext);

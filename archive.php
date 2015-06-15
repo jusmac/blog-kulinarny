@@ -14,7 +14,7 @@
  * @since 		Timber 0.2
  */
 
-		$templates = array('archive.twig', 'index.twig');
+		$templates = array('archive.twig', 'base.twig');
 
 		$data = Timber::get_context();
 
@@ -35,11 +35,12 @@
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
 		
-ob_start();
-dynamic_sidebar('home_right_1');
-$context['lewy_widget_area'] = ob_get_contents();
-ob_end_clean();
+		ob_start();
+		dynamic_sidebar('home_right_1');
+		$data['lewy_widget_area'] = ob_get_contents();
+		ob_end_clean();
 
 		$data['posts'] = Timber::get_posts();
 
 		Timber::render($templates, $data);
+		

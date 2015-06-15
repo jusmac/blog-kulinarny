@@ -17,4 +17,10 @@ if (isset($wp_query->query_vars['author'])){
 	$data['author'] = $author;
 	$data['title'] = 'Author Archives: ' . $author->name();
 }
+
+	ob_start();
+	dynamic_sidebar('home_right_1');
+	$data['lewy_widget_area'] = ob_get_contents();
+	ob_end_clean();
+
 Timber::render(array('author.twig', 'archive.twig'), $data);
