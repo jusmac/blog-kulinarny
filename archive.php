@@ -40,6 +40,16 @@
 		$data['lewy_widget_area'] = ob_get_contents();
 		ob_end_clean();
 
+		ob_start();
+	dynamic_sidebar('home_top_1');
+	$data['gorny_widget_area'] = ob_get_contents();
+	ob_end_clean();
+
+	ob_start();
+		dynamic_sidebar('tip_sidebar');
+		$data['tip_widget_area'] = ob_get_contents();
+		ob_end_clean();
+
 		$data['posts'] = Timber::get_posts();
 
 		Timber::render($templates, $data);

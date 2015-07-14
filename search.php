@@ -21,4 +21,14 @@ dynamic_sidebar('home_right_1');
 $context['lewy_widget_area'] = ob_get_contents();
 ob_end_clean();
 
+ob_start();
+	dynamic_sidebar('home_top_1');
+	$context['gorny_widget_area'] = ob_get_contents();
+	ob_end_clean();
+
+		ob_start();
+		dynamic_sidebar('tip_sidebar');
+		$context['tip_widget_area'] = ob_get_contents();
+		ob_end_clean();
+
 	Timber::render($templates, $context);

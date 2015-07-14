@@ -9,15 +9,15 @@
         {% block header %}
             <div id='menu-container'>
                 <div class='menu-content'>
-                    <a href='http://justyna-m.890m.com/'><h1 class=h1-menu>Od kuchni</h1></a>
-                    <h2 class=h2-menu>Czyli książeczka z przepisami</h2>
+                    <a href='http://justyna-m.890m.com/'><h1>Od kuchni</a>
+    <span> czyli książeczka z przepisami</span></h1>
+                </div>
+                <div class='menu'>
+                    {{gorny_widget_area}}
                 </div>
             </div>
-            <div id='fork'>
-            <img class='fork-img' src='/wp-content/themes/timber-starter-theme/views/img/fork.png' alt=''/>
-        </div> 
-            <div id='menu-container-background'>
-        </div>
+            
+        
         {% endblock %}
     </header>
 
@@ -25,16 +25,21 @@
         <div id='left-menu'>
             {{lewy_widget_area}}
         </div>
-       
+        <div id='tips'>
+            <div class='close-tip'>x</div>
+                {{tip_widget_area}}
+            </div>
+
         <div id='content'> 
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>  
-        
+
     </section>
 
     {% block footer %}
         <footer>
-            {% include 'footer.twig' %}
+           {% include 'footer.twig' %}
         </footer>
     {% endblock %}
     <div id="background">

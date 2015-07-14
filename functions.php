@@ -13,6 +13,7 @@ function funkcja_dodajaca_widgety() {
 
 }
 add_action( 'widgets_init', 'funkcja_dodajaca_widgety' );
+
 function funkcja_dodajaca_widgety_next() {
 
 	register_sidebar ( array(
@@ -26,6 +27,20 @@ function funkcja_dodajaca_widgety_next() {
 
 }
 add_action( 'widgets_init', 'funkcja_dodajaca_widgety_next' );
+
+function funkcja_dodajaca_widgety_third() {
+
+	register_sidebar ( array(
+		'name'          => 'Third sidebar',
+		'id'            => 'tip_sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="tip">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'funkcja_dodajaca_widgety_third' );
 
 	if (!class_exists('Timber')){
 		add_action( 'admin_notices', function(){
