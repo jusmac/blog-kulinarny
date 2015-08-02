@@ -7,7 +7,6 @@ var closingTipHandling = function(){
 
 	});
 };
-
 $(function() {
 	closingTipHandling();
 	if ((typeof(sessionStorage.getItem('showTips'))!= 'undefined') && sessionStorage.getItem('showTips')=='false'){

@@ -6,15 +6,16 @@
 			<div class='front'>
 				<p><small>{{ post.post_date|date}}</small></p>
 					<h4 class="h4">
-						<a href="{{post.link}}">{{post.title}}</a>
+						<a class='post-title' href="{{post.link}}">{{post.title}}</a>
 					</h4>
+				</div>
 					{% if post.thumbnail.src %}
-						<img class='thumbnail' src="{{post.thumbnail.src}}" />
+						<div class='thumbnail'>
+						<img class='thumbnail-img' src="{{post.thumbnail.src}}" />
+					</div>
 					{% endif %}
-			</div>
-			<div class='back'>	
-				<p><small>{{post.get_preview(35)}}</small></p>
-			</div>
+			
+		
 		</div>
 	</div>
 {% endblock %}

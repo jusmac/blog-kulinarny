@@ -6,18 +6,22 @@
 {% endblock %}
 <body class="{{body_class}} body" data-template="base.twig">
     <header>
-        {% block header %}
-            <div id='menu-container'>
-                <div class='menu-content'>
-                    <a href='http://justyna-m.890m.com/'><h1>Od kuchni</a>
-    <span> czyli książeczka z przepisami</span></h1>
-                </div>
-                <div class='menu'>
-                    {{gorny_widget_area}}
-                </div>
+        {% block header %} 
+            <div class='menu'>
+                {{gorny_widget_area}}
             </div>
+              <div class='menu-content'>
+                <h1><a href='http://justyna-m.890m.com/'>
+                    Od kuchni </a> <span> czyli książeczka z przepisami</span>
+                </h1>
+            </div>
+
+          
+            <div id='tips'>
+           <div class='close-tip'><p>x</p></div>
+            {{tip_widget_area}}
+        </div>
             
-        
         {% endblock %}
     </header>
 
@@ -25,10 +29,7 @@
         <div id='left-menu'>
             {{lewy_widget_area}}
         </div>
-        <div id='tips'>
-            <div class='close-tip'>x</div>
-                {{tip_widget_area}}
-            </div>
+
 
         <div id='content'> 
             {% block content %}
@@ -40,11 +41,8 @@
     {% block footer %}
         <footer>
            {% include 'footer.twig' %}
-        </footer>
-    {% endblock %}
-    <div id="background">
-      <img class='background-img' src= /wp-content/themes/timber-starter-theme/views/img/background.jpg alt=''/>
-    </div>
+       </footer>
+   {% endblock %}
 
 </body>
 </html>
